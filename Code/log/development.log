@@ -17608,3 +17608,800 @@ Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-16 17:46:34 
 
 
 Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2015-02-16 17:46:34 -0800
+
+
+Started GET "/events" for 127.0.0.1 at 2015-02-16 19:26:29 -0800
+
+LoadError (cannot load such file -- /Users/zhangyu/Documents/workspace_ruby/Nation_builder_chat_room/ChatRoom_REST_API/config/routes.rb):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:222:in `load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:222:in `block in load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:213:in `load_dependency'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:222:in `load'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:40:in `each'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:16:in `reload!'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  activesupport (4.0.0) lib/active_support/file_update_checker.rb:75:in `call'
+  activesupport (4.0.0) lib/active_support/file_update_checker.rb:75:in `execute'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:7:in `execute'
+  railties (4.0.0) lib/rails/application/finisher.rb:81:in `block (2 levels) in <module:Finisher>'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:397:in `_run__561717200011877552__prepare__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:74:in `prepare!'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:62:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/zhangyu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/zhangyu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/zhangyu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.4ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.1ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2015-02-16 19:27:19 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.8ms)[0m  SELECT "events".* FROM "events"
+Completed 200 OK in 68ms (Views: 41.8ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2015-02-16 19:35:06 -0800
+Processing by EventsController#create as */*
+  Parameters: {"event_date"=>"2014-12-31T23:59:59Z", "user"=>"Alice", "event_type"=>"leave", "event"=>{"event_date"=>"2014-12-31T23:59:59Z", "user"=>"Alice", "event_type"=>"leave"}}
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (8.1ms)[0m  INSERT INTO "events" ("created_at", "event_date", "event_type", "updated_at", "user") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 17 Feb 2015 03:35:06 UTC +00:00], ["event_date", Wed, 31 Dec 2014 23:59:59 UTC +00:00], ["event_type", "leave"], ["updated_at", Tue, 17 Feb 2015 03:35:06 UTC +00:00], ["user", "Alice"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/events/31
+Completed 302 Found in 36ms (ActiveRecord: 9.6ms)
+
+
+Started GET "/events/31" for 127.0.0.1 at 2015-02-16 19:35:06 -0800
+Processing by EventsController#show as */*
+  Parameters: {"id"=>"31"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "31"]]
+  Rendered events/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 160ms (Views: 154.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2015-02-16 19:39:38 -0800
+Processing by EventsController#create as */*
+  Parameters: {"event_date"=>"2014-12-31T23:59:59Z", "user"=>"Alice", "event_type"=>"leave", "event"=>{"event_date"=>"2014-12-31T23:59:59Z", "user"=>"Alice", "event_type"=>"leave"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "events" ("created_at", "event_date", "event_type", "updated_at", "user") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 17 Feb 2015 03:39:38 UTC +00:00], ["event_date", Wed, 31 Dec 2014 23:59:59 UTC +00:00], ["event_type", "leave"], ["updated_at", Tue, 17 Feb 2015 03:39:38 UTC +00:00], ["user", "Alice"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  Rendered events/show.json.jbuilder (1.4ms)
+Completed 201 Created in 47ms (Views: 7.1ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2015-02-16 19:40:36 -0800
+
+SyntaxError (/Users/zhangyu/Documents/workspace_ruby/NationBuilderChatRoom_REST_API/Code/app/controllers/events_controller.rb:147: syntax error, unexpected tINTEGER, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+...er action: 'show', status: :200, location: @event }
+...                               ^):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `block in load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:615:in `new_constants_in'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:422:in `load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:323:in `require_or_load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:462:in `load_missing_constant'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:183:in `const_missing'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:534:in `get'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:565:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__3940590992670926710__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/zhangyu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/zhangyu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/zhangyu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.2ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2015-02-16 19:40:47 -0800
+Processing by EventsController#create as */*
+  Parameters: {"event_date"=>"2014-12-31T23:59:59Z", "user"=>"Alice", "event_type"=>"leave", "event"=>{"event_date"=>"2014-12-31T23:59:59Z", "user"=>"Alice", "event_type"=>"leave"}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "events" ("created_at", "event_date", "event_type", "updated_at", "user") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 17 Feb 2015 03:40:47 UTC +00:00], ["event_date", Wed, 31 Dec 2014 23:59:59 UTC +00:00], ["event_type", "leave"], ["updated_at", Tue, 17 Feb 2015 03:40:47 UTC +00:00], ["user", "Alice"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  Rendered events/show.json.jbuilder (0.6ms)
+Completed 200 OK in 55ms (Views: 7.1ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2015-02-16 19:42:44 -0800
+
+SyntaxError (/Users/zhangyu/Documents/workspace_ruby/NationBuilderChatRoom_REST_API/Code/app/controllers/events_controller.rb:149: syntax error, unexpected ':', expecting =>
+          respond = {"status": "ok"}
+                              ^
+/Users/zhangyu/Documents/workspace_ruby/NationBuilderChatRoom_REST_API/Code/app/controllers/events_controller.rb:149: syntax error, unexpected '}', expecting keyword_end):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `block in load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:615:in `new_constants_in'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:422:in `load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:323:in `require_or_load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:462:in `load_missing_constant'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:183:in `const_missing'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:534:in `get'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:565:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__3940590992670926710__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/zhangyu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/zhangyu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/zhangyu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.7ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2015-02-16 19:43:28 -0800
+Processing by EventsController#create as */*
+  Parameters: {"event_date"=>"2014-12-31T23:59:59Z", "user"=>"Alice", "event_type"=>"leave", "event"=>{"event_date"=>"2014-12-31T23:59:59Z", "user"=>"Alice", "event_type"=>"leave"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "events" ("created_at", "event_date", "event_type", "updated_at", "user") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 17 Feb 2015 03:43:28 UTC +00:00], ["event_date", Wed, 31 Dec 2014 23:59:59 UTC +00:00], ["event_type", "leave"], ["updated_at", Tue, 17 Feb 2015 03:43:28 UTC +00:00], ["user", "Alice"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Completed 406 Not Acceptable in 36ms
+
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  app/controllers/events_controller.rb:144:in `create'
+
+
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2015-02-16 19:47:04 -0800
+Processing by EventsController#create as */*
+  Parameters: {"event_date"=>"2014-12-31T23:59:59Z", "user"=>"Alice", "event_type"=>"leave", "event"=>{"event_date"=>"2014-12-31T23:59:59Z", "user"=>"Alice", "event_type"=>"leave"}}
+  [1m[35m (2.3ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "events" ("created_at", "event_date", "event_type", "updated_at", "user") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 17 Feb 2015 03:47:04 UTC +00:00], ["event_date", Wed, 31 Dec 2014 23:59:59 UTC +00:00], ["event_type", "leave"], ["updated_at", Tue, 17 Feb 2015 03:47:04 UTC +00:00], ["user", "Alice"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Completed 200 OK in 46ms (Views: 0.3ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2015-02-16 19:48:00 -0800
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2015-02-16 19:49:56 -0800
+Processing by EventsController#create as */*
+  Parameters: {"event_date"=>"2014-12-32T23:59:59Z", "user"=>"Alice", "event_type"=>"enter", "event"=>{"event_date"=>"2014-12-32T23:59:59Z", "user"=>"Alice", "event_type"=>"enter"}}
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (argument out of range):
+  app/controllers/events_controller.rb:142:in `create'
+
+
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.7ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2015-02-16 19:50:35 -0800
+Processing by EventsController#create as */*
+  Parameters: {"event_date"=>"2015-12-30T23:59:59Z", "user"=>"Alice", "event_type"=>"enter", "event"=>{"event_date"=>"2015-12-30T23:59:59Z", "user"=>"Alice", "event_type"=>"enter"}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "events" ("created_at", "event_date", "event_type", "updated_at", "user") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 17 Feb 2015 03:50:35 UTC +00:00], ["event_date", Wed, 30 Dec 2015 23:59:59 UTC +00:00], ["event_type", "enter"], ["updated_at", Tue, 17 Feb 2015 03:50:35 UTC +00:00], ["user", "Alice"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2015-02-16 19:52:17 -0800
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.8ms)[0m  [1mSELECT "events".* FROM "events"[0m
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2015-02-16 19:53:31 -0800
+Processing by EventsController#create as */*
+  Parameters: {"event_date"=>"2015-12-30T23:59:59Z", "user"=>"Alice", "event_type"=>"comment", "message"=>"hello, this is a sample message", "event"=>{"event_date"=>"2015-12-30T23:59:59Z", "user"=>"Alice", "event_type"=>"comment", "message"=>"hello, this is a sample message"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "events" ("created_at", "event_date", "event_type", "message", "updated_at", "user") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 17 Feb 2015 03:53:31 UTC +00:00], ["event_date", Wed, 30 Dec 2015 23:59:59 UTC +00:00], ["event_type", "comment"], ["message", "hello, this is a sample message"], ["updated_at", Tue, 17 Feb 2015 03:53:31 UTC +00:00], ["user", "Alice"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2015-02-16 19:54:37 -0800
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2015-02-16 19:55:51 -0800
+Processing by EventsController#create as */*
+  Parameters: {"event_date"=>"2015-12-30T23:59:59Z", "user"=>"Alice", "type"=>"highfive", "otheruser"=>"Bob", "event"=>{"event_date"=>"2015-12-30T23:59:59Z", "user"=>"Alice", "otheruser"=>"Bob"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "events" ("created_at", "event_date", "otheruser", "updated_at", "user") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 17 Feb 2015 03:55:51 UTC +00:00], ["event_date", Wed, 30 Dec 2015 23:59:59 UTC +00:00], ["otheruser", "Bob"], ["updated_at", Tue, 17 Feb 2015 03:55:51 UTC +00:00], ["user", "Alice"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2015-02-16 19:56:41 -0800
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2015-02-16 19:57:27 -0800
+Processing by EventsController#create as */*
+  Parameters: {"event_date"=>"2015-12-30T23:59:59Z", "user"=>"Alice", "event_type"=>"highfive", "otheruser"=>"Bob", "event"=>{"event_date"=>"2015-12-30T23:59:59Z", "user"=>"Alice", "event_type"=>"highfive", "otheruser"=>"Bob"}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "events" ("created_at", "event_date", "event_type", "otheruser", "updated_at", "user") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 17 Feb 2015 03:57:27 UTC +00:00], ["event_date", Wed, 30 Dec 2015 23:59:59 UTC +00:00], ["event_type", "highfive"], ["otheruser", "Bob"], ["updated_at", Tue, 17 Feb 2015 03:57:27 UTC +00:00], ["user", "Alice"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2015-02-16 19:57:47 -0800
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events?from=2013-02-15T23:53:00Z&to=2016-02-15T23:53:55Z" for 127.0.0.1 at 2015-02-16 20:00:41 -0800
+Processing by EventsController#index as HTML
+  Parameters: {"from"=>"2013-02-15T23:53:00Z", "to"=>"2016-02-15T23:53:55Z"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events" WHERE (event_date >= '2013-02-15 23:53:00' AND event_date <= '2016-02-15 23:53:55')
+Completed 200 OK in 15ms (Views: 10.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events?from=2015-02-15T23:53:00Z&to=2015-02-16T23:53:55Z" for 127.0.0.1 at 2015-02-16 20:01:14 -0800
+Processing by EventsController#index as HTML
+  Parameters: {"from"=>"2015-02-15T23:53:00Z", "to"=>"2015-02-16T23:53:55Z"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE (event_date >= '2015-02-15 23:53:00' AND event_date <= '2015-02-16 23:53:55')[0m
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?from=2015-02-15T23:53:00Z&to=2015-02-15T23:57:55Z" for 127.0.0.1 at 2015-02-16 20:02:32 -0800
+Processing by EventsController#index as HTML
+  Parameters: {"from"=>"2015-02-15T23:53:00Z", "to"=>"2015-02-15T23:57:55Z"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE (event_date >= '2015-02-15 23:53:00' AND event_date <= '2015-02-15 23:57:55')
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events?from=2015-02-15T23:53:00Z&to=2015-02-15T23:54:55Z" for 127.0.0.1 at 2015-02-16 20:02:41 -0800
+Processing by EventsController#index as HTML
+  Parameters: {"from"=>"2015-02-15T23:53:00Z", "to"=>"2015-02-15T23:54:55Z"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE (event_date >= '2015-02-15 23:53:00' AND event_date <= '2015-02-15 23:54:55')[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?from=2015-02-15T23:53:00Z&to=2015-02-15T23:54:55Z" for 127.0.0.1 at 2015-02-16 20:02:44 -0800
+Processing by EventsController#index as HTML
+  Parameters: {"from"=>"2015-02-15T23:53:00Z", "to"=>"2015-02-15T23:54:55Z"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE (event_date >= '2015-02-15 23:53:00' AND event_date <= '2015-02-15 23:54:55')
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/events?from=2015-02-15T23:53:00Z&to=2015-02-15T23:54:55Z" for 127.0.0.1 at 2015-02-16 20:03:04 -0800
+Processing by EventsController#create as */*
+  Parameters: {"event_date"=>"2015-12-30T23:59:59Z", "user"=>"Alice", "event_type"=>"highfive", "otheruser"=>"Bob", "from"=>"2015-02-15T23:53:00Z", "to"=>"2015-02-15T23:54:55Z", "event"=>{"event_date"=>"2015-12-30T23:59:59Z", "user"=>"Alice", "event_type"=>"highfive", "otheruser"=>"Bob"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "events" ("created_at", "event_date", "event_type", "otheruser", "updated_at", "user") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 17 Feb 2015 04:03:04 UTC +00:00], ["event_date", Wed, 30 Dec 2015 23:59:59 UTC +00:00], ["event_type", "highfive"], ["otheruser", "Bob"], ["updated_at", Tue, 17 Feb 2015 04:03:04 UTC +00:00], ["user", "Alice"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/events?from=2015-02-15T23:53:00Z&to=2015-02-15T23:54:55Z" for 127.0.0.1 at 2015-02-16 20:03:11 -0800
+Processing by EventsController#index as */*
+  Parameters: {"from"=>"2015-02-15T23:53:00Z", "to"=>"2015-02-15T23:54:55Z"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE (event_date >= '2015-02-15 23:53:00' AND event_date <= '2015-02-15 23:54:55')
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events?from=2015-02-15T23:53:00Z&to=2015-02-15T23:54:55Z" for 127.0.0.1 at 2015-02-16 20:04:55 -0800
+Processing by EventsController#index as */*
+  Parameters: {"from"=>"2015-02-15T23:53:00Z", "to"=>"2015-02-15T23:54:55Z"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE (event_date >= '2015-02-15 23:53:00' AND event_date <= '2015-02-15 23:54:55')[0m
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?from=2015-02-15T23:53:00Z&to=2015-02-15T23:54:55Z" for 127.0.0.1 at 2015-02-16 20:07:16 -0800
+
+SyntaxError (/Users/zhangyu/Documents/workspace_ruby/NationBuilderChatRoom_REST_API/Code/config/routes.rb:14: syntax error, unexpected ':', expecting keyword_end
+      defaults: { format: :json }
+               ^):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:222:in `load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:222:in `block in load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:213:in `load_dependency'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:222:in `load'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:40:in `each'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:16:in `reload!'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  activesupport (4.0.0) lib/active_support/file_update_checker.rb:75:in `call'
+  activesupport (4.0.0) lib/active_support/file_update_checker.rb:75:in `execute'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:7:in `execute'
+  railties (4.0.0) lib/rails/application/finisher.rb:81:in `block (2 levels) in <module:Finisher>'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:397:in `_run__3576046954656607085__prepare__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:74:in `prepare!'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:62:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/zhangyu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/zhangyu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/zhangyu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.5ms)
+
+
+Started GET "/events?from=2015-02-15T23:53:00Z&to=2015-02-15T23:54:55Z" for 127.0.0.1 at 2015-02-16 20:07:33 -0800
+
+SyntaxError (/Users/zhangyu/Documents/workspace_ruby/NationBuilderChatRoom_REST_API/Code/config/routes.rb:14: syntax error, unexpected {, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+      defaults:{format: :json}
+                ^):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:222:in `load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:222:in `block in load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:213:in `load_dependency'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:222:in `load'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:40:in `each'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:16:in `reload!'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  activesupport (4.0.0) lib/active_support/file_update_checker.rb:75:in `call'
+  activesupport (4.0.0) lib/active_support/file_update_checker.rb:75:in `execute'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:7:in `execute'
+  railties (4.0.0) lib/rails/application/finisher.rb:81:in `block (2 levels) in <module:Finisher>'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:397:in `_run__3576046954656607085__prepare__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:74:in `prepare!'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:62:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/zhangyu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/zhangyu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/zhangyu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.7ms)
+
+
+Started GET "/events?from=2015-02-15T23:53:00Z&to=2015-02-15T23:54:55Z" for 127.0.0.1 at 2015-02-16 20:07:54 -0800
+
+SyntaxError (/Users/zhangyu/Documents/workspace_ruby/NationBuilderChatRoom_REST_API/Code/config/routes.rb:14: syntax error, unexpected {, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+      defaults:{format: :json}
+                ^):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:222:in `load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:222:in `block in load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:213:in `load_dependency'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:222:in `load'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:40:in `each'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:16:in `reload!'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  activesupport (4.0.0) lib/active_support/file_update_checker.rb:75:in `call'
+  activesupport (4.0.0) lib/active_support/file_update_checker.rb:75:in `execute'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:7:in `execute'
+  railties (4.0.0) lib/rails/application/finisher.rb:81:in `block (2 levels) in <module:Finisher>'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:397:in `_run__3576046954656607085__prepare__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:74:in `prepare!'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:62:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/zhangyu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/zhangyu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/zhangyu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.0ms)
+
+
+Started GET "/events?from=2015-02-15T23:53:00Z&to=2015-02-15T23:54:55Z" for 127.0.0.1 at 2015-02-16 20:08:34 -0800
+Processing by EventsController#index as */*
+  Parameters: {"from"=>"2015-02-15T23:53:00Z", "to"=>"2015-02-15T23:54:55Z"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE (event_date >= '2015-02-15 23:53:00' AND event_date <= '2015-02-15 23:54:55')
+Completed 200 OK in 33ms (Views: 27.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/events?from=2015-02-15T23:53:00Z&to=2015-02-15T23:54:55Z" for 127.0.0.1 at 2015-02-16 20:11:13 -0800
+Processing by EventsController#index as */*
+  Parameters: {"from"=>"2015-02-15T23:53:00Z", "to"=>"2015-02-15T23:54:55Z"}
+Completed 500 Internal Server Error in 4ms
+
+ArgumentError (too few arguments):
+  app/controllers/events_controller.rb:21:in `format'
+  app/controllers/events_controller.rb:21:in `index'
+
+
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.7ms)
+
+
+Started GET "/events?from=2015-02-15T23:53:00Z&to=2015-02-15T23:54:55Z" for 127.0.0.1 at 2015-02-16 20:16:16 -0800
+Processing by EventsController#index as */*
+  Parameters: {"from"=>"2015-02-15T23:53:00Z", "to"=>"2015-02-15T23:54:55Z"}
+Completed 500 Internal Server Error in 5ms
+
+ArgumentError (too few arguments):
+  app/controllers/events_controller.rb:22:in `format'
+  app/controllers/events_controller.rb:22:in `index'
+
+
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.2ms)
+
+
+Started GET "/events?from=2015-02-15T23:53:00Z&to=2015-02-15T23:54:55Z" for 127.0.0.1 at 2015-02-16 20:17:13 -0800
+Processing by EventsController#index as */*
+  Parameters: {"from"=>"2015-02-15T23:53:00Z", "to"=>"2015-02-15T23:54:55Z"}
+Completed 500 Internal Server Error in 7ms
+
+ArgumentError (too few arguments):
+  app/controllers/events_controller.rb:22:in `format'
+  app/controllers/events_controller.rb:22:in `index'
+
+
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.7ms)
+
+
+Started GET "/events?from=2015-02-15T23:53:00Z&to=2015-02-15T23:54:55Z" for 127.0.0.1 at 2015-02-16 20:17:58 -0800
+Processing by EventsController#index as */*
+  Parameters: {"from"=>"2015-02-15T23:53:00Z", "to"=>"2015-02-15T23:54:55Z"}
+Completed 500 Internal Server Error in 7ms
+
+ArgumentError (too few arguments):
+  app/controllers/events_controller.rb:22:in `format'
+  app/controllers/events_controller.rb:22:in `index'
+
+
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (79.1ms)
+
+
+Started GET "/events?from=2015-02-15T23:53:00Z&to=2015-02-15T23:54:55Z" for 127.0.0.1 at 2015-02-16 20:20:03 -0800
+Processing by EventsController#index as */*
+  Parameters: {"from"=>"2015-02-15T23:53:00Z", "to"=>"2015-02-15T23:54:55Z"}
+Completed 500 Internal Server Error in 5ms
+
+ArgumentError (too few arguments):
+  app/controllers/events_controller.rb:22:in `format'
+  app/controllers/events_controller.rb:22:in `index'
+
+
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.1ms)
+
+
+Started GET "/events?from=2015-02-15T23:53:00Z&to=2015-02-15T23:54:55Z" for 127.0.0.1 at 2015-02-16 20:21:28 -0800
+Processing by EventsController#index as */*
+  Parameters: {"from"=>"2015-02-15T23:53:00Z", "to"=>"2015-02-15T23:54:55Z"}
+Completed 500 Internal Server Error in 5ms
+
+ArgumentError (too few arguments):
+  app/controllers/events_controller.rb:22:in `format'
+  app/controllers/events_controller.rb:22:in `index'
+
+
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.0ms)
+
+
+Started GET "/events?from=2015-02-15T23:53:00Z&to=2015-02-15T23:54:55Z" for 127.0.0.1 at 2015-02-16 20:22:25 -0800
+Processing by EventsController#index as */*
+  Parameters: {"from"=>"2015-02-15T23:53:00Z", "to"=>"2015-02-15T23:54:55Z"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE (event_date >= '2015-02-15 23:53:00' AND event_date <= '2015-02-15 23:54:55')[0m
+Completed 200 OK in 48ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/summary?from=2013-02-15T23:53:00Z&to=2016-02-15T23:53:55Z&by=hour" for 127.0.0.1 at 2015-02-16 20:25:28 -0800
+Processing by EventsController#summary as HTML
+  Parameters: {"from"=>"2013-02-15T23:53:00Z", "to"=>"2016-02-15T23:53:55Z", "by"=>"hour"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT STRFTIME("%Y-%m-%d %H", event_date) AS date, COUNT(*) AS total FROM "events" WHERE (event_date >= '2013-02-15 23:53:00' AND event_date <= '2016-02-15 23:53:55') GROUP BY date
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d %H", event_date) AS date, COUNT(*) AS enters FROM "events" WHERE (event_date >= '2013-02-15 23:53:00' AND event_date <= '2016-02-15 23:53:55' AND event_type == 'enter') GROUP BY date[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT STRFTIME("%Y-%m-%d %H", event_date) AS date, COUNT(*) AS leaves FROM "events" WHERE "events"."event_type" = 'leave' GROUP BY date
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d %H", event_date) AS date, COUNT(*) AS comments FROM "events" WHERE "events"."event_type" = 'comment' GROUP BY date[0m
+  [1m[35mEvent Load (0.1ms)[0m  SELECT STRFTIME("%Y-%m-%d %H", event_date) AS date, COUNT(*) AS highfives FROM "events" WHERE "events"."event_type" = 'highfive' GROUP BY date
+Completed 200 OK in 49ms (Views: 0.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/summary?from=2013-02-15T23:53:00Z&to=2015-02-15T23:53:55Z&by=hour" for 127.0.0.1 at 2015-02-16 20:26:55 -0800
+Processing by EventsController#summary as HTML
+  Parameters: {"from"=>"2013-02-15T23:53:00Z", "to"=>"2015-02-15T23:53:55Z", "by"=>"hour"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d %H", event_date) AS date, COUNT(*) AS total FROM "events" WHERE (event_date >= '2013-02-15 23:53:00' AND event_date <= '2015-02-15 23:53:55') GROUP BY date[0m
+  [1m[35mEvent Load (0.3ms)[0m  SELECT STRFTIME("%Y-%m-%d %H", event_date) AS date, COUNT(*) AS enters FROM "events" WHERE (event_date >= '2013-02-15 23:53:00' AND event_date <= '2015-02-15 23:53:55' AND event_type == 'enter') GROUP BY date
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d %H", event_date) AS date, COUNT(*) AS leaves FROM "events" WHERE "events"."event_type" = 'leave' GROUP BY date[0m
+  [1m[35mEvent Load (0.3ms)[0m  SELECT STRFTIME("%Y-%m-%d %H", event_date) AS date, COUNT(*) AS comments FROM "events" WHERE "events"."event_type" = 'comment' GROUP BY date
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d %H", event_date) AS date, COUNT(*) AS highfives FROM "events" WHERE "events"."event_type" = 'highfive' GROUP BY date[0m
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2015-02-16 20:28:39 -0800
+Processing by EventsController#index as HTML
+Completed 406 Not Acceptable in 1ms
+
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  app/controllers/events_controller.rb:20:in `index'
+
+
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/zhangyu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2015-02-16 20:29:18 -0800
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.7ms)[0m  SELECT "events".* FROM "events"
+Completed 200 OK in 36ms (Views: 29.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/summary?from=2013-02-15T23:53:00Z&to=2015-02-15T23:53:55Z&by=day" for 127.0.0.1 at 2015-02-16 20:30:34 -0800
+Processing by EventsController#summary as HTML
+  Parameters: {"from"=>"2013-02-15T23:53:00Z", "to"=>"2015-02-15T23:53:55Z", "by"=>"day"}
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d", event_date) AS date, COUNT(*) AS total FROM "events" WHERE (event_date >= '2013-02-15 23:53:00' AND event_date <= '2015-02-15 23:53:55') GROUP BY date[0m
+  [1m[35mEvent Load (0.3ms)[0m  SELECT STRFTIME("%Y-%m-%d", event_date) AS date, COUNT(*) AS enters FROM "events" WHERE (event_date >= '2013-02-15 23:53:00' AND event_date <= '2015-02-15 23:53:55' AND event_type == 'enter') GROUP BY date
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d", event_date) AS date, COUNT(*) AS leaves FROM "events" WHERE "events"."event_type" = 'leave' GROUP BY date[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT STRFTIME("%Y-%m-%d", event_date) AS date, COUNT(*) AS comments FROM "events" WHERE "events"."event_type" = 'comment' GROUP BY date
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d", event_date) AS date, COUNT(*) AS highfives FROM "events" WHERE "events"."event_type" = 'highfive' GROUP BY date[0m
+Completed 200 OK in 35ms (Views: 0.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/summary?from=2013-02-15T23:53:00Z&to=2016-02-15T23:53:55Z&by=day" for 127.0.0.1 at 2015-02-16 20:30:39 -0800
+Processing by EventsController#summary as HTML
+  Parameters: {"from"=>"2013-02-15T23:53:00Z", "to"=>"2016-02-15T23:53:55Z", "by"=>"day"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT STRFTIME("%Y-%m-%d", event_date) AS date, COUNT(*) AS total FROM "events" WHERE (event_date >= '2013-02-15 23:53:00' AND event_date <= '2016-02-15 23:53:55') GROUP BY date
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d", event_date) AS date, COUNT(*) AS enters FROM "events" WHERE (event_date >= '2013-02-15 23:53:00' AND event_date <= '2016-02-15 23:53:55' AND event_type == 'enter') GROUP BY date[0m
+  [1m[35mEvent Load (0.3ms)[0m  SELECT STRFTIME("%Y-%m-%d", event_date) AS date, COUNT(*) AS leaves FROM "events" WHERE "events"."event_type" = 'leave' GROUP BY date
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d", event_date) AS date, COUNT(*) AS comments FROM "events" WHERE "events"."event_type" = 'comment' GROUP BY date[0m
+  [1m[35mEvent Load (0.3ms)[0m  SELECT STRFTIME("%Y-%m-%d", event_date) AS date, COUNT(*) AS highfives FROM "events" WHERE "events"."event_type" = 'highfive' GROUP BY date
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/summary?from=2013-02-15T23:53:00Z&to=2015-02-15T23:53:55Z&by=hour" for 127.0.0.1 at 2015-02-16 20:31:38 -0800
+Processing by EventsController#summary as HTML
+  Parameters: {"from"=>"2013-02-15T23:53:00Z", "to"=>"2015-02-15T23:53:55Z", "by"=>"hour"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d %H", event_date) AS date, COUNT(*) AS total FROM "events" WHERE (event_date >= '2013-02-15 23:53:00' AND event_date <= '2015-02-15 23:53:55') GROUP BY date[0m
+  [1m[35mEvent Load (0.4ms)[0m  SELECT STRFTIME("%Y-%m-%d %H", event_date) AS date, COUNT(*) AS enters FROM "events" WHERE (event_date >= '2013-02-15 23:53:00' AND event_date <= '2015-02-15 23:53:55' AND event_type == 'enter') GROUP BY date
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d %H", event_date) AS date, COUNT(*) AS leaves FROM "events" WHERE "events"."event_type" = 'leave' GROUP BY date[0m
+  [1m[35mEvent Load (0.3ms)[0m  SELECT STRFTIME("%Y-%m-%d %H", event_date) AS date, COUNT(*) AS comments FROM "events" WHERE "events"."event_type" = 'comment' GROUP BY date
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d %H", event_date) AS date, COUNT(*) AS highfives FROM "events" WHERE "events"."event_type" = 'highfive' GROUP BY date[0m
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/summary?from=2013-02-15T23:53:00Z&to=2015-02-15T23:53:55Z&by=minute" for 127.0.0.1 at 2015-02-16 20:32:20 -0800
+Processing by EventsController#summary as HTML
+  Parameters: {"from"=>"2013-02-15T23:53:00Z", "to"=>"2015-02-15T23:53:55Z", "by"=>"minute"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT STRFTIME("%Y-%m-%d %H:%M", event_date) AS date, COUNT(*) AS total FROM "events" WHERE (event_date >= '2013-02-15 23:53:00' AND event_date <= '2015-02-15 23:53:55') GROUP BY date
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d %H:%M", event_date) AS date, COUNT(*) AS enters FROM "events" WHERE (event_date >= '2013-02-15 23:53:00' AND event_date <= '2015-02-15 23:53:55' AND event_type == 'enter') GROUP BY date[0m
+  [1m[35mEvent Load (0.7ms)[0m  SELECT STRFTIME("%Y-%m-%d %H:%M", event_date) AS date, COUNT(*) AS leaves FROM "events" WHERE "events"."event_type" = 'leave' GROUP BY date
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d %H:%M", event_date) AS date, COUNT(*) AS comments FROM "events" WHERE "events"."event_type" = 'comment' GROUP BY date[0m
+  [1m[35mEvent Load (0.3ms)[0m  SELECT STRFTIME("%Y-%m-%d %H:%M", event_date) AS date, COUNT(*) AS highfives FROM "events" WHERE "events"."event_type" = 'highfive' GROUP BY date
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/summary?from=2013-02-15T23:53:00Z&to=2016-02-15T23:53:55Z&by=minute" for 127.0.0.1 at 2015-02-16 20:32:25 -0800
+Processing by EventsController#summary as HTML
+  Parameters: {"from"=>"2013-02-15T23:53:00Z", "to"=>"2016-02-15T23:53:55Z", "by"=>"minute"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d %H:%M", event_date) AS date, COUNT(*) AS total FROM "events" WHERE (event_date >= '2013-02-15 23:53:00' AND event_date <= '2016-02-15 23:53:55') GROUP BY date[0m
+  [1m[35mEvent Load (0.3ms)[0m  SELECT STRFTIME("%Y-%m-%d %H:%M", event_date) AS date, COUNT(*) AS enters FROM "events" WHERE (event_date >= '2013-02-15 23:53:00' AND event_date <= '2016-02-15 23:53:55' AND event_type == 'enter') GROUP BY date
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d %H:%M", event_date) AS date, COUNT(*) AS leaves FROM "events" WHERE "events"."event_type" = 'leave' GROUP BY date[0m
+  [1m[35mEvent Load (0.3ms)[0m  SELECT STRFTIME("%Y-%m-%d %H:%M", event_date) AS date, COUNT(*) AS comments FROM "events" WHERE "events"."event_type" = 'comment' GROUP BY date
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d %H:%M", event_date) AS date, COUNT(*) AS highfives FROM "events" WHERE "events"."event_type" = 'highfive' GROUP BY date[0m
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/summary?from=2013-02-15T23:53:00Z&to=2016-02-15T23:53:55Z&by=minute" for 127.0.0.1 at 2015-02-16 20:33:25 -0800
+Processing by EventsController#summary as */*
+  Parameters: {"from"=>"2013-02-15T23:53:00Z", "to"=>"2016-02-15T23:53:55Z", "by"=>"minute"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT STRFTIME("%Y-%m-%d %H:%M", event_date) AS date, COUNT(*) AS total FROM "events" WHERE (event_date >= '2013-02-15 23:53:00' AND event_date <= '2016-02-15 23:53:55') GROUP BY date
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d %H:%M", event_date) AS date, COUNT(*) AS enters FROM "events" WHERE (event_date >= '2013-02-15 23:53:00' AND event_date <= '2016-02-15 23:53:55' AND event_type == 'enter') GROUP BY date[0m
+  [1m[35mEvent Load (0.3ms)[0m  SELECT STRFTIME("%Y-%m-%d %H:%M", event_date) AS date, COUNT(*) AS leaves FROM "events" WHERE "events"."event_type" = 'leave' GROUP BY date
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d %H:%M", event_date) AS date, COUNT(*) AS comments FROM "events" WHERE "events"."event_type" = 'comment' GROUP BY date[0m
+  [1m[35mEvent Load (0.3ms)[0m  SELECT STRFTIME("%Y-%m-%d %H:%M", event_date) AS date, COUNT(*) AS highfives FROM "events" WHERE "events"."event_type" = 'highfive' GROUP BY date
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/summary?from=2013-02-15T23:53:00Z&to=2016-02-15T23:53:55Z&by=minute" for 127.0.0.1 at 2015-02-16 20:33:52 -0800
+Processing by EventsController#summary as HTML
+  Parameters: {"from"=>"2013-02-15T23:53:00Z", "to"=>"2016-02-15T23:53:55Z", "by"=>"minute"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d %H:%M", event_date) AS date, COUNT(*) AS total FROM "events" WHERE (event_date >= '2013-02-15 23:53:00' AND event_date <= '2016-02-15 23:53:55') GROUP BY date[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT STRFTIME("%Y-%m-%d %H:%M", event_date) AS date, COUNT(*) AS enters FROM "events" WHERE (event_date >= '2013-02-15 23:53:00' AND event_date <= '2016-02-15 23:53:55' AND event_type == 'enter') GROUP BY date
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d %H:%M", event_date) AS date, COUNT(*) AS leaves FROM "events" WHERE "events"."event_type" = 'leave' GROUP BY date[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT STRFTIME("%Y-%m-%d %H:%M", event_date) AS date, COUNT(*) AS comments FROM "events" WHERE "events"."event_type" = 'comment' GROUP BY date
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT STRFTIME("%Y-%m-%d %H:%M", event_date) AS date, COUNT(*) AS highfives FROM "events" WHERE "events"."event_type" = 'highfive' GROUP BY date[0m
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 1.2ms)

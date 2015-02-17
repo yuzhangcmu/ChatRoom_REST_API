@@ -15,9 +15,8 @@
           {start_date: params[:from].to_datetime, end_date: params[:to].to_datetime})
       else
         @events = Event.all
-      end
-
-      # return the json data.
+      end      
+      
       render json: @events, :only => [:event_date, :user, :event_type, :otheruser, :message]
     end
 
@@ -143,8 +142,12 @@
 
       respond_to do |format|
         if @event.save
-          format.html { redirect_to @event, notice: 'Event was successfully created.' }
-          format.json { render action: 'show', status: :created, location: @event }
+          #format.html { redirect_to @event, notice: 'Event was successfully created.' }
+          #format.json { render action: 'show', status: :ok, location: @event }
+
+          response_create_ok = {"status" => "ok"}
+          format.json { render status: :ok, json: response_create_ok}
+          
         else
           format.html { render action: 'new' }
           format.json { render json: @event.errors, status: :unprocessable_entity }
